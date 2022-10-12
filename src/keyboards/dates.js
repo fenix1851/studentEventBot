@@ -3,40 +3,33 @@ const dates = ['14 Октября',
     '16 Октября',
     '17 Октября',
     '18 Октября ']
-const datesKeyboard = [
-        [
-            {
-                text: dates[0],
-                callback_data: '14'
-            },
-            {
-                text: dates[1],
-                callback_data: '15'
-            }
-        ],
-        [
-            {
-                text: dates[2],
-                callback_data: '16'
-            },
-            {
-                text: dates[3],
-
-                callback_data: '17'
-            }
-        ],
-        [
-            {
-                text: dates[4],
-                callback_data: '18'
-            }
-        ],
-        [
-            {
-                text: 'Вернуться в главное меню',
-                callback_data: 'Back'
-            }
-        ]
-    ]
+const eventDates = {
+    'round': ['17 октября'],
+    'masters': ['16 октября'],
+    'excursions': ['16 октября'],
+    'programs': ['16 октября','17 октября']
+}
+const datesKeyboardArray = []
+const datesKeyboard = (type) => {
+    let dates = []
+    switch(type){
+        case 'round':
+            dates = eventDates.tables
+            break   
+        case 'masters':
+            dates = eventDates.masters
+            break  
+        case 'excursions':
+            dates = eventDates.excursions
+            break  
+        case 'programs':
+            dates = eventDates.programs
+            break  
+    }
+    for(let i = 0; i < dates.length; i++ ){
+        datesKeyboardArray.push({'text': dates[i], callback_data: dates[i].split(' ')[0]})
+    }
+    return datesKeyboardArray
+}
 
 module.exports = datesKeyboard

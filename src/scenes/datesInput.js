@@ -18,10 +18,16 @@ datesInput.enter((ctx) => {
         else if(ctx.scene.state.eventType == 'round'){
             text = 'круглого стола'
         }
+        else if(ctx.scene.state.eventType == 'excursions'){
+            text = 'экскурсий'
+        }
+        else if(ctx.scene.state.eventType == 'programs'){
+            text = 'образовательных программ'
+        }
         ctx.telegram.sendMessage(ctx.chat.id, `
            Выбери дату ${text}:`, {
             reply_markup: {
-                inline_keyboard: datesKeyboard
+                inline_keyboard: datesKeyboard(ctx.scene.state.eventType)
             }
         });
 

@@ -22,7 +22,16 @@ eventsMenu.enter((ctx) => {
                             text: 'Круглые столы',
                             callback_data: 'round'
                         }
-                    ]
+                    ],
+                    [{
+                        text: 'Экскурсии',
+                        callback_data: 'excursions'
+                    },
+                    {
+                        text: 'Образовательные программы',
+                        callback_data: 'programs'
+                    }
+                ]
                 ]
             }
         });
