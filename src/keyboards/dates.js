@@ -14,7 +14,7 @@ const datesKeyboard = (type) => {
     let dates = []
     switch(type){
         case 'round':
-            dates = eventDates.tables
+            dates = eventDates.round
             break   
         case 'masters':
             dates = eventDates.masters
