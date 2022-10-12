@@ -9,8 +9,9 @@ const eventDates = {
     'excursions': ['16 октября'],
     'programs': ['16 октября','17 октября']
 }
-const datesKeyboardArray = []
+
 const datesKeyboard = (type) => {
+    const datesKeyboardArray = []
     let dates = []
     switch(type){
         case 'round':
