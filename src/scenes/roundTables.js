@@ -99,11 +99,11 @@ roundTables.enter(async (ctx) => {
 
 Темы: ${table.topics}
 
-Минестарство: ${table.departments}
+Минестерство: ${table.departments}
 
 Место: ${table.places}
 
-Осталось мест: ${table.availableMembers}
+Осталось мест: ${table.availableMembers}/${table.maxMembers}
                 `, {
                         reply_markup: {
                             inline_keyboard: [
