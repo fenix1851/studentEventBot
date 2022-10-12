@@ -29,6 +29,10 @@ const datesKeyboard = (type) => {
     for(let i = 0; i < dates.length; i++ ){
         datesKeyboardArray.push([{'text': dates[i], callback_data: dates[i].split(' ')[0]}])
     }
+    datesKeyboardArray.push([{
+        text: 'Назад',
+        callback_data: 'Back'
+    }])
     return datesKeyboardArray
 }
 
